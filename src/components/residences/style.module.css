@@ -1,0 +1,173 @@
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.card{
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    padding: 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.card__left__item{
+    background-color: rgb(43, 43, 43);
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    scroll-behavior:initial;
+}
+.img {
+    width: 20%;
+    height: 210px;
+    border-radius: 40%;
+}
+
+.card__h2 {
+    font-size: 18px;
+    font-family: Space Mono;
+    color:white;
+}
+
+.card__p {
+    font-size: 18px;
+    font-family: Space Mono;
+      color:white;
+}
+
+
+.h2 {
+    font-size: 18px;
+    font-family: Space Mono;
+      color:white;
+}
+
+.card__span {
+    font-size: 18px;
+    font-family: Space Mono;
+      color:white;
+}
+
+.card__bottom {
+    display: block;
+}
+
+.card__button {
+    display: block;
+    width: 180px;
+    height: 40px;
+    border-radius: 16px;
+    background-color: rgb(43, 43, 43);
+    border: none;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: Space Mono;
+      color:white;
+}
+.modal__item{
+    display: flex;
+    justify-content: end;
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(38, 38, 38);
+    opacity: 0.8;
+
+}
+.modal {
+    position: fixed;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: rgb(251, 249, 249);
+    z-index: 1001;
+    width: 400px;
+    height: 400px;
+    left: 0;
+    right: 0;
+    top: 120px;
+    bottom: 0;
+}
+.input{
+    width: 80%;
+    border: 2px solid rgb(102, 102, 102);
+    border-radius: 8px;
+    padding: 5px;
+    display: block;
+    margin-bottom: 15px;
+    
+}
+
+.modal__button{
+    width: 70px; 
+    height: 30px;
+    background-color:black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 20px;
+    border-radius: 5px;
+    color: aliceblue;
+}
+.card {
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    padding: 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.card__modal{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+.form {
+    width: 100%;
+}
+
+.input__top {
+    background-color: rgb(43, 43, 43);
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 40%;
+    height: 50px;
+    border-radius: 10px;
+    display: block;
+    font-size: 22px;
+    font-family: Space Mono;
+    color: white;
+}
+
+.card__modal__button{
+    width: 180px;
+    height: 50px;
+    border-radius: 16px;
+    background-color: rgb(43, 43, 43);
+    border: none;
+    font-size: 18px;
+    font-family: Space Mono;
+    color:white;
+    text-align: center;
+    margin-left: 470px;
+}
+.leftt{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
