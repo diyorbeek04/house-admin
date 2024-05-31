@@ -4,7 +4,7 @@ import Styles from './style.module.css';
 import ClearIcon from '@mui/icons-material/Clear';
 
 const DealsComponent = () => {
-   const [tasks, Deals] = useState([]);
+      const [tasks, Deals] = useState([]);
    const [taskToEdit, setTaskToEdit] = useState(null);
    const [open, setOpen] = useState(false);
    const imgRef = useRef();
@@ -26,6 +26,27 @@ const DealsComponent = () => {
       setOpen(true);
    };
 
+   const handleSubmitPost = (e) => {
+      e.preventDefault();
+      const bodyPost = {
+         deals_img: imgRef.current.value,
+         deals_title: titleRef.current.value,
+         deals_SqFt: descRef.current.value,
+         deals_price: priceRef.current.value,
+         deals_bads: badsRef.current.value,
+         deals_baths: bathsRef.current.value,
+      }
+      axios.post(`http://localhost:8000/Deals`, bodyPost)
+      .then(data => setPost(data))
+      axios.get(`http://localhost:8000/Deals`)
+      .then((data) => setData(data))
+      imgRef.current.value = null
+      titleRef.current.value = null
+      descRef.current.value = null
+      priceRef.current.value= null
+      badsRef.current.value = null
+      bathsRef.current.value = null
+  }
    const handleSubmitEdit = () => {
       if (imgRef.current.value && titleRef.current.value && descRef.current.value && priceRef.current.value && salesRef.current.value && taskToEdit && bathsRef.current.value && badsRef.current.value) {
          const body = {
