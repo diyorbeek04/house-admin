@@ -63,7 +63,9 @@ function MoreNFTComponent() {
           {tasks.map((task, index) => (
             <div key={index} className={Styles.card}>
               <p className={Styles.img} >{task.contact_email}</p>
-              
+              <div className={Styles.card__right}>
+                        <button className={Styles.card__button} onClick={() => handleDelete(task.id)}>Delete</button>
+                     </div>
             </div>
           ))}
         </div>
