@@ -149,8 +149,3 @@ const DealsComponent = () => {
 };
 
 export default DealsComponent;
-
-
-
-
-// export default DealsComponent
