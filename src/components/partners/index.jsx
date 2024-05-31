@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import axios from 'axios';
 import Styles from './style.module.css';
 import ClearIcon from '@mui/icons-material/Clear';
+import { useDispatch, useSelector } from 'react-redux';
+import { ImageUpload } from '../../redux/image-upload';
 
 const PartnersComponent = () => {
    const [tasks, Partners] = useState([]);
@@ -12,13 +14,17 @@ const PartnersComponent = () => {
    const descRef = useRef();
    const priceRef = useRef();
    const salesRef = useRef();
-
+   const dispatch = useDispatch();
+   const imageUrl = useSelector(state => state.upload.imageUpload.data);
    useEffect(() => {
       axios.get('http://localhost:8000/Partners')
          .then(res => Partners(res.data))
          .catch(err => console.error('Error fetching data:', err));
    }, []);
-
+   const handleChange = (e) => {
+      dispatch(ImageUpload(e));
+      console.log(imageUrl)
+    };
    const handleEdit = (task) => {
       setTaskToEdit(task);
       setOpen(true);
@@ -57,10 +63,7 @@ const PartnersComponent = () => {
             <div className={Styles.container}>
             <div className={Styles.card}>
             <form className={Styles.form}>
-              <div className={Styles.card__modal}>
-                <input className={Styles.input__top} ref={imgRef} type='url' placeholder='Rasm' />
-              </div>
-              <button className={Styles.card__modal__button}>Qo'shish</button>
+            <input onChange={handleChange} type="file" />
             </form>
           </div>
 
