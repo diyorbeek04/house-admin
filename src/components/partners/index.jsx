@@ -64,6 +64,7 @@ const PartnersComponent = () => {
             <div className={Styles.card}>
             <form className={Styles.form}>
             <input onChange={handleChange} type="file" />
+            <img src={imageUrl} width={'30%'} alt="" />
             </form>
           </div>
 
